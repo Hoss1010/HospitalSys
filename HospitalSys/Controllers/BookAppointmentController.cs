@@ -29,10 +29,10 @@ namespace HospitalSys.Controllers
             }
 
             var numOfDoctors = doctors.Count();
-            var numOfPages = Math.Ceiling(numOfDoctors / 8.0);
+            var numOfPages = Math.Ceiling(numOfDoctors / 5.0);
 
             ViewBag.numOfPages = numOfPages;
-            doctors = doctors.Skip((page - 1) * 8).Take(8);
+            doctors = doctors.Skip((page - 1) * 5).Take(5);
 
 
 
