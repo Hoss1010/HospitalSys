@@ -1,0 +1,24 @@
+﻿@model IEnumerable<HospitalSys.Models.Appointment>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Patient</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Doctor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model){
+            <tr>
+                <th scope="row">@item.id</th>
+                <td>@item.PatientName</td>
+                <td>@item.Date</td>
+                <td>@item.Time</td>
+                <td>@item.DoctorName</td>
+            </tr>
+        }
+         
+    </tbody>
+</table>
